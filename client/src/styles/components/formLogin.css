@@ -1,0 +1,214 @@
+.container-login {
+  color: black;
+  position: fixed;
+  z-index: 10000;
+  background: #fff;
+  width: min(540px, 100% - 32px);
+  height: min(660px, 100% - 32px);
+  border-radius: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  overflow-y: auto;
+  transition: 0.3s;
+
+  .bg-magic {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: radial-gradient(#ffffff40, #fff0 40%),
+      radial-gradient(
+        hsl(44, 100%, 66%) 30%,
+        hsl(338, 68%, 65%),
+        hsla(338, 68%, 65%, 0.4) 41%,
+        transparent 52%
+      ),
+      radial-gradient(hsl(272, 100%, 60%) 37%, transparent 46%),
+      linear-gradient(155deg, transparent 65%, hsl(142, 70%, 49%) 95%),
+      linear-gradient(45deg, #0065e0, #0f8bff);
+    opacity: 0.08;
+    background-size: 200% 200%, 285% 500%, 285% 500%, cover, cover;
+    background-position: bottom left, 109% 68%, 109% 68%, center, center;
+  }
+
+  .close-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    top: 16px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(22, 24, 35, 0.03);
+    z-index: 9999;
+  }
+
+  .box-login {
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    p {
+      font-size: 14px;
+    }
+
+    .top-img {
+      img {
+        width: 100px;
+        background: black;
+        padding: 5px 10px;
+        border-radius: 10px;
+        filter: drop-shadow(0 0 5px #000000a3);
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: calc(100% - 100px);
+      gap: 10px;
+
+      .item {
+        font-size: 13px;
+        input {
+          margin-top: 5px;
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+          font-size: 13px;
+        }
+      }
+
+      .item_top,
+      .item_bottom {
+        display: flex;
+        gap: 10px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: var(--secondary);
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+
+    .other-login {
+      width: calc(100% - 100px);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      .other {
+        width: 100%;
+        font-family: "Oswald", sans-serif;
+        font-size: 14px;
+        border: 2px solid #dce0e3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        padding: 10px;
+        border-radius: 44px;
+        background: #fff;
+        position: relative;
+        font-weight: 500;
+
+        i,
+        img {
+          position: absolute;
+          left: 16px;
+          font-size: 1.3rem;
+          color: rgb(63, 63, 250);
+        }
+
+        &:hover {
+          background-color: #dce0e3;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .bottom-btn {
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: 16px;
+      border: none;
+      background: none;
+      margin: 15px 0 10px 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .forgotPW {
+      cursor: pointer;
+      color: var(--secondary);
+      background: none;
+      border: none;
+      font-weight: 600;
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .rules {
+      font-size: 13px;
+      color: #333;
+      margin-top: 10px;
+      text-align: center;
+      max-width: 360px;
+      font-weight: 500;
+    }
+  }
+}
+
+.register {
+  display: none;
+}
+
+.register.visible {
+  display: block;
+}
+
+.forgot {
+  display: none;
+}
+
+.forgot.activeForgot {
+  display: block;
+}
+
+.container-login.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 540px) {
+  .container-login {
+    form {
+      width: 100% !important;
+    }
+
+    .other-login {
+      width: 100% !important;
+    }
+  }
+}

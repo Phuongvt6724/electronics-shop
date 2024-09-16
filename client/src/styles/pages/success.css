@@ -1,0 +1,82 @@
+.container_success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    line-height: 3;
+
+    i {
+      font-size: 6rem;
+      color: #53ef7d;
+      margin: 1rem 0;
+    }
+
+    a {
+      width: fit-content;
+      display: block;
+      margin-top: 10px;
+      background: var(--secondary);
+      padding: 0 1rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .title-success {
+      text-align: center;
+      line-height: 2.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        align-items: center;
+    }
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#b0e633, #53ef7d);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 1s ease-in infinite alternate-reverse;
+  }
+
+  .circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+  }
+
+  .circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+  }
+}
+@keyframes move-up6 {
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(20px);
+  }
+}

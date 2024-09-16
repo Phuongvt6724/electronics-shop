@@ -1,0 +1,211 @@
+footer {
+  background: var(--black);
+  padding-top: 50px;
+  margin-top: 50px;
+  box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px,
+    #ffffff52 0px 2px 16px 0px;
+}
+
+footer .container-footer {
+  max-width: 1540px;
+  margin: 0 auto;
+  display: grid;
+  padding: 0 100px;
+  grid-template-areas: "about widget lastRigt";
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 14px;
+}
+
+.container-footer .footer-about {
+  grid-area: about;
+}
+
+.container-footer .ffooter-widget {
+  grid-area: widget;
+}
+
+.container-footer .footer-lastRigt {
+  grid-area: lastRigt;
+}
+
+.container-footer .footer-about .footer__about__logo a {
+  display: inline-block;
+  width: 105px;
+}
+
+.container-footer .footer-about .footer__about__logo a img {
+  width: 100%;
+}
+
+.container-footer .footer-about ul li {
+  list-style: none;
+  color: #fff;
+  line-height: 2;
+  font-weight: 600;
+}
+
+.container-footer .footer-widget h6 {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.container-footer .footer-widget ul {
+  width: 50%;
+  float: left;
+}
+
+.container-footer .footer-widget ul li {
+  list-style: none;
+  line-height: 2.3;
+}
+
+.container-footer .footer-widget ul li a {
+  font-size: 12px;
+  color: #7e7e7e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.container-footer .footer-widget ul li a:hover {
+  color: #fff;
+}
+
+.container-footer .footer-lastRigt h6,
+.container-footer .footer-lastRigt p {
+  color: #fff;
+}
+
+.container-footer .footer-lastRigt h6 {
+  font-size: 14px;
+}
+
+.container-footer .footer-lastRigt p {
+  font-size: 14px;
+  margin: 20px 0;
+  margin-top: 10px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.container-footer .footer-lastRigt form {
+  position: relative;
+}
+
+.container-footer .footer-lastRigt form button {
+  position: absolute;
+  height: 100%;
+  white-space: nowrap;
+  padding: 0 26px;
+  right: 0;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.container-footer .footer-lastRigt form input {
+  width: 100%;
+  font-size: 16px;
+  padding-left: 15px;
+  color: #1c1c1c;
+  height: 40px;
+  border: 1px solid #ededed;
+  outline: none;
+  background: none;
+  color: #fff;
+}
+
+.container-footer .footer-lastRigt form .input:focus {
+  color: rgb(0, 255, 255);
+  background-color: #212121;
+  outline-color: rgb(0, 255, 255);
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  transition: 0.1s;
+  transition-property: box-shadow;
+}
+
+.container-footer .footer-lastRigt .footer__widget__social {
+  margin-top: 20px;
+}
+
+.container-footer .footer-lastRigt .footer__widget__social a {
+  display: inline-block;
+  text-decoration: none;
+  height: 41px;
+  width: 41px;
+  color: black;
+  border: 1px solid #ededed;
+  border-radius: 50%;
+  line-height: 38px;
+  text-align: center;
+  background: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.container-footer .footer-lastRigt .footer__widget__social a:hover {
+  background: black;
+  color: #fff;
+}
+
+footer .design-by {
+  margin-top: 20px;
+  color: var(--White-color);
+  border-top: 1px solid white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .design-by p {
+  position: relative;
+  width: fit-content;
+  padding-bottom: 5px;
+}
+
+footer .design-by strong {
+  color: var(--secondary);
+  animation: changeColor 0.3s linear infinite;
+}
+
+footer .design-by p::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: var(--secondary);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: changeWidth 1s linear infinite alternate;
+}
+
+@keyframes changeColor {
+  100% {
+    color: var(--primary);
+  }
+}
+
+@keyframes changeWidth {
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  footer .container-footer {
+    grid-template-areas:
+      "about"
+      "widget"
+      "lastRigt";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 20px;
+  }
+
+  .container-footer .footer-widget {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,175 @@
+.container_otp {
+  margin: 2rem 0;
+
+  .spinLoad {
+    animation: spin 0.5s linear infinite;
+  }
+
+  .box_verify {
+    position: relative;
+    margin: 0 auto;
+    max-width: 700px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    background-image: radial-gradient(
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 1) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 1) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 1) 0px, transparent 85%);
+    border-radius: 1rem;
+    box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+
+    .wrapper_image {
+      max-width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .box_otp {
+    background-image: radial-gradient(
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
+  }
+
+  .right_content {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    button {
+      margin-top: 1rem;
+      cursor: pointer;
+      box-shadow: 1px 0px 20px rgba(71, 184, 255, 0.5),
+        0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+        inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+        inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+
+      background-image: linear-gradient(
+        325deg,
+        hsla(217 100% 56% / 1) 0%,
+        hsla(263, 93%, 56%, 1) 155%,
+        rgb(91, 154, 255) 90%
+      );
+      padding: 10px 13px;
+      border-radius: 5px;
+      border: none;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      gap: 10px;
+      color: white;
+    }
+
+    .otpInput {
+      margin: 1rem 0;
+      display: flex;
+      gap: 7px;
+      input {
+        margin: 0 !important;
+        width: 40px !important;
+        height: 40px !important;
+        outline: none !important;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+
+    .phoneInput {
+      margin: 1rem 0;
+      width: fit-content;
+
+      .form-control {
+        padding-left: 45px;
+      }
+
+      .country-list {
+        li {
+          color: black;
+          text-align: left;
+
+          .country-name {
+            font-weight: 400;
+            white-space: nowrap;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .card__border {
+    overflow: hidden;
+    pointer-events: none;
+
+    position: absolute;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background-image: linear-gradient(
+      0deg,
+      hsl(0, 0%, 100%) -50%,
+      hsl(0, 0%, 40%) 100%
+    );
+
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container_otp {
+    margin: 20px 10px;
+    .box_verify {
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      padding: 15px;
+
+      .wrapper_image {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,343 @@
+.section_information {
+  .container-infor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .box-infor {
+    padding: 0 1.875rem 0.625rem;
+    background-color: rgb(33, 33, 33);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.13);
+    border-radius: 0.5rem;
+    width: 600px;
+  }
+
+  .title-infor {
+    width: 100%;
+    border-bottom: 0.0625rem solid #efefef;
+    padding: 1.125rem 0;
+  }
+
+  .title-infor .SbCTde {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .title-infor .zptdmA {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    color: white;
+  }
+
+  .infor-imagebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrap-text {
+    margin: 20px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: rgba(85, 85, 85, 0.8);
+  }
+
+  .wrap-text span {
+    display: inline-block;
+    color: white;
+    min-width: 70px !important;
+  }
+
+  .wrap-text .item{
+    display: flex;
+    gap: 20px;
+  }
+
+  .infor-phone,
+  .infor-username,
+  .infor-email,
+  .infor-password {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .infor-phone .add_phone {
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3em;
+    background-image: linear-gradient(
+      325deg,
+      hsla(217 100% 56% / 1) 0%,
+      hsla(194 100% 69% / 1) 55%,
+      hsla(217 100% 56% / 1) 90%
+    );
+    color: #ffffff;
+    font-weight: 600;
+    transition: 0.8s;
+    background-size: 280% auto;
+    box-shadow: 1px 0px 20px rgba(71, 184, 255, 0.5),
+      0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+      inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+      inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+
+    &:hover {
+      background-position: right top;
+    }
+  }
+
+  .infor-phone .change-phone {
+    padding: 10px 20px;
+  }
+
+  .infor-username {
+    .item {
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .infor-password {
+    .item-bottom {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .document-infor {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 10px 10px 10px 14px;
+    width: 100%;
+    color: black;
+    background-color: #e9ecef;
+    outline: none;
+    font-size: 14px;
+  }
+
+  .infor-password input {
+    background: white;
+    border: none;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    padding: 7px 75px 7px 14px;
+    border-radius: 0.25rem;
+  }
+
+  .infor-password .button-changepassword {
+    width: 150px;
+    padding: 10px 0;
+    border-radius: 10px;
+    outline: none;
+    border: 3px ridge #149cea;
+    background: none;
+    box-shadow: inset 0px 0px 5px #1479ea;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .infor-password .button-changepassword:hover {
+    box-shadow: inset 0px 0px 35px #1479ea;
+    cursor: pointer;
+  }
+
+  .LoNm4g {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 20px 0;
+    background-position: 50%;
+    background-size: 105% 105%;
+    position: relative;
+  }
+
+  .LoNm4g::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -3px;
+    top: -4px;
+    border: 0.2em solid currentColor;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-radius: 50%;
+    box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,
+      0 0 110px #ed306f, 0 0 80px #0ba9ca;
+    animation: spinner-border 7s alternate linear infinite;
+  }
+
+  .file-upload {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    color: #555;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    box-shadow: inset 0px 0px 5px #1479ea;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: white;
+    border: 3px ridge #149cea;
+    border-radius: 0.3em;
+    font-weight: bold;
+    transition: box-shadow 0.5s ease;
+  }
+
+  .file-upload:hover {
+    box-shadow: inset 0px 0px 35px #1479ea;
+    cursor: pointer;
+  }
+
+  .file-upload .upload {
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    width: 0.5em;
+  }
+}
+
+.container_RestoreformPassword {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.445);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  .form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #0077be, #3b8df2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 2s;
+    transform: scale(0);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 300px;
+
+    .close-form {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 1.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .input {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+      transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    color: rgb(255, 255, 255);
+    border: 2px solid #3b8df2;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    outline: none;
+    width: 100%;
+  }
+
+  .input::placeholder {
+    color: #fff;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b8df2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: rotateX(-10deg);
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+}
+
+.container_RestoreformPassword.active {
+  display: inline-flex;
+
+  .form {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section_information {
+    .infor-username {
+      flex-direction: column;
+    }
+
+    .box-infor {
+      width: 100%;
+    }
+
+    .infor-password {
+      input {
+        width: 100%;
+      }
+    }
+
+    .infor-password {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export const IMAGES_PATH = "https://api-apple.phuongdev.io.vn/images/";
